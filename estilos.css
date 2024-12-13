@@ -1,0 +1,511 @@
+/* Estilo general */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Fuente desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;500&display=swap');
+
+body {
+    background-image: url('./Imagenes/collaguedefinitivo.jpg');
+    background-size: cover; /* Cubre toda la pantalla */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que se repita */
+}
+
+/* Header */
+header {
+    font-family: 'Poppins', sans-serif;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Nav */
+nav {
+    font-family: 'Poppins', sans-serif;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Section */
+section {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    text-align: center;
+    border-radius: 10px;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Footer */
+footer {
+    font-family: 'Poppins', sans-serif;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Estilo para los elementos de navegación */
+nav ul {
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #ff6347;
+}
+
+/* Estilo de los títulos de las secciones */
+section h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+section p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: #555;
+}
+
+/* Estilo de las imágenes en la galería */
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.galeria img {
+    max-width: 200px;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.galeria img[alt="Imagen Vertical"] {
+    max-width: 150px;
+    max-height: none;
+    height: auto;
+}
+
+/* Estilo para los iconos de redes sociales */
+.redes-sociales {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.redes-sociales a {
+    margin: 0 10px;
+    font-size: 24px;
+    color: #000; /* Color de los iconos */
+    transition: transform 0.3s ease;
+}
+
+.redes-sociales a:hover {
+    transform: scale(1.2); /* Ampliación al pasar el mouse */
+    color: #1DA1F2; /* Color destacado para "X" o cualquier otra red */
+}
+
+
+/* Estilo para los elementos de la lista en la sección de servicios */
+#servicios ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#servicios li {
+    width: 200px;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#servicios li:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+/* Estilo para el contenedor del carrusel */
+.carrusel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.carrusel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.card {
+    flex: 0 0 50%;  /* Asegura que cada carta ocupe el 50% del contenedor (dos imágenes a la vez) */
+    padding: 10px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Estilo para los botones de navegación */
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 5px 15px;
+    font-size: 18px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 5px;
+    transition: background-color 0.2s ease;
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
+/* Efecto de hover para los botones */
+button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+/* Sección Contacto */
+#contacto {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+/* Estilo del formulario en contacto */
+#contacto form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto 40px auto; /* Ajusta el margen inferior del cuadro del mensaje */
+}
+
+.redes-sociales {
+    display: flex;
+    justify-content: center;
+    margin-top: 70px; /* Este valor puede ser ajustado según la necesidad */
+}
+
+#contacto form label {
+    font-size: 1rem;
+}
+
+#contacto form input, 
+#contacto form textarea {
+    padding: 10px;
+    font-size: 1rem;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+/* Boton enviar de formulario */
+#contacto form button {
+    width: 250px;
+    margin-top: 290px; /* Aumenta el espacio superior */
+    padding: 12px;
+    margin-left: -30%;
+    background-color: #ff6347; /* Color del botón */
+    border: none;
+    color: white;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#contacto form button:hover {
+    background-color: #e55347; /* Color al hacer hover en el botón */
+}
+
+#contacto form button:active {
+    background-color: #ff6347; /* Cambio de color al hacer clic */
+}
+
+
+/* Estilo del botón de abrir el formulario */
+#openModalBtn {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#openModalBtn:hover {
+    background-color: #2980b9;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.close-btn {
+    background: #f44336;
+    color: white;
+    padding: 5px 10px;
+    margin-top: 289px;
+    margin-left: 30%;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Estilo del botón de abrir el formulario */
+#openModalBtn {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#openModalBtn:hover {
+    background-color: #2980b9;
+}
+
+/* Botón estilizado */
+#openModalBtn {
+    background-color: #3498db; /* Azul llamativo */
+    color: white; /* Texto blanco */
+    margin-left: -5.5%;
+    margin-top: 610px;
+    padding: 10px 20px; /* Espaciado interno */
+    border: none; /* Sin bordes */
+    border-radius: 8px; /* Bordes redondeados */
+    font-size: 16px; /* Tamaño del texto */
+    font-weight: bold; /* Texto en negrita */
+    cursor: pointer; /* Cambiar el cursor a una mano */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+    transition: all 0.3s ease; /* Transiciones suaves */
+}
+
+/* Efecto hover */
+#openModalBtn:hover {
+    background-color: #2980b9; /* Azul más oscuro */
+    transform: scale(1); /* Aumentar ligeramente el tamaño */
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.close-btn {
+    background: #f44336;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Formulario */
+#contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#contactForm input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#contactForm button {
+    padding: 10px;
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#contactForm button:hover {
+    background-color: #2ecc71;
+}
+
+/* Tabla de datos */
+/* Estilo para la tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #ccc;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+
+/* Estilo para el checkbox */
+.checkbox {
+    width: 20px;
+    height: 20px;
+}
+
+
+/* Estilo para los botones de Eliminar y Actualizar seleccionados */
+button#deleteSelected, button#updateSelected {
+    padding: 6px 10px; /* Espaciado interno */
+    font-size: 16px; /* Tamaño de la fuente */
+    font-weight: bold; /* Texto en negrita */
+    border: none; /* Sin borde */
+    border-radius: 8px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transición suave */
+    display: inline-block; /* Los mantiene en línea */
+    margin: 10px; /* Espacio entre los botones */
+    width: auto; /* El tamaño depende del contenido */
+}
+
+/* Estilo para el botón Eliminar seleccionados */
+button#deleteSelected {
+    background-color: #e74c3c; /* Rojo para eliminar */
+    color: white; /* Texto blanco */
+    margin-top: 100px;
+    margin-left: 300px;
+}
+
+button#deleteSelected:hover {
+    background-color: #c0392b; /* Rojo más oscuro al pasar el ratón */
+    transform: scale(1); /* Agrandar ligeramente el botón */
+}
+
+button#deleteSelected:active {
+    background-color: #e74c3c; /* Mantener el color al hacer clic */
+}
+
+/* Estilo para el botón Actualizar seleccionados */
+button#updateSelected {
+    background-color: #f39c12; /* Naranja para actualizar */
+    color: white; /* Texto blanco */
+    margin-left: 300px;
+}
+
+button#updateSelected:hover {
+    background-color: #e67e22; /* Naranja más oscuro al pasar el ratón */
+    transform: scale(1); /* Agrandar ligeramente el botón */
+}
+
+button#updateSelected:active {
+    background-color: #f39c12; /* Mantener el color al hacer clic */
+}
+
+/* Estilo para la casilla de selección */
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
